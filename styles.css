@@ -1,0 +1,148 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 400px; /* Limit max width for larger screens */
+    text-align: center;
+    margin: auto; /* Ensure the card is centered properly */
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #4CAF50;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4CAF50; /* Green underline to match theme */
+    display: inline-block;
+}
+
+.account-info h2 {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+#amount {
+    width: 100%; /* Fully occupy the container width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Prevent overflow issues */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+    /* flex-wrap: wrap; Allows buttons to wrap on smaller screens */
+}
+
+button {
+    flex: 1; /* Equal width for buttons */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease;
+    /* min-width: 45%; Ensures buttons don't shrink too much */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.transaction-history {
+    display: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.transaction-history h3 {
+    margin-bottom: 10px;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+}
+
+#historyList li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 5px solid #4CAF50;
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        margin-top: 10px;
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+
+    #amount {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        /* align-items: stretch; Full width on small screens */
+    }
+
+    .container {
+        width: 95%; /* Use most of the screen width */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 25px; /* Adjust heading size */
+    }
+
+    #amount {
+        width: 100%; /* Ensure full width for input */
+        margin: 0 auto; /* Center input horizontally */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add space between buttons */
+    }
+
+    button {
+        width: 100%; /* Make buttons occupy full width */
+        padding: 10px; /* Uniform padding for all buttons */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}
